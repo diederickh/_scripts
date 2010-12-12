@@ -17,4 +17,4 @@ ofxOsc
 ofxHttpServer
 ofxFileTransfer
 ofxStringEncoders
-
+ofxTweakbar

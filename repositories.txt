@@ -18,3 +18,5 @@ ofxHttpServer
 ofxFileTransfer
 ofxStringEncoders
 ofxTweakbar
+ofxOpenNI
+ofxTweakbar

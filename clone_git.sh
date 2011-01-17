@@ -1,11 +1,12 @@
 #!/bin/sh
 base=${PWD}
-for dir in * ; do 
-	if [ ! -d ${dir} ] ; then
-		continue;
+addons_dir=${base}/../
+
+while read addon; do
+	cd $addons_dir
+	if [ ! -d "${addons_dir}${addon}" ] ; then
+		git clone git@github.com:roxlu/${addon}.git
 	fi
-	
-	cd ${base}/${dir}
-	git clone git@github.com:roxlu/${dir}.git .
-	cd ..
-done;
+
+done < "repositories.txt"
+
